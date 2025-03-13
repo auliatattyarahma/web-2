@@ -1,0 +1,38 @@
+Nama : Aulia Tattya Rahma
+Nim : 0110124214
+Rombel : SI-10
+
+1.	Jelaskan apa yang dimaksud dengan dokumen root ?
+
+Merupakan bentuk utama yang mendefinisikan struktur dasar sebuah dokumen di dalam uatu system yang ada, dan merupakan sebuah elemen paling atas yang mencakup semua elemen lain dalam dokumen tersebut.  
+
+2.	Pada apache web server, apakah dokumen root harus terletak dalam direktori 
+C:/xampp/htdocs ? Jelaskan jawaban anda 
+Tidak harus, kita dapat mengubahnya dengan mengedit file httpd.conf di direktori Apache dan mengatur DocumentRoot serta Directory ke lokasi yang diinginkan. 
+
+3.	Jelaskan apa yang dimaksud dengan perintah git : init, clone, remote, add, commit, push, dan checkout 
+Git init = perintah dalam system kontrol yang digunakan untuk menginisialisasi repositori git baru.
+Git clone = perintah yang digunakan untuk menyalin penyimpanan git dari server jarak jauh ke mesin local.
+Git remote = fitur dari system pengontrol Git yang memungkinkan kolaborasi antar pengguna dalam pengembangan software.
+Git add = system control yang digunakan untuk menambah perubahan pada area staging
+Git commit = untung menyimpan perubahan yang telah ditambahkan ke dalam repository anda
+Git push = mengirim commit dari repository local ke repository remote
+Git checkout = perintah yang digunakan untuk berpindah antar branch atau memeriksa file dari commit tertentu
+
+4.	Jelaskan perbedaan antara Github dan Gitlab ?
+GitHub : Untuk menyediakan layanan hosting untuk repository Git dan kolaborasi kode
+GitLab : Selain hosting repository Git, juga menawarkan CI/CD built-in
+
+5.	Apa bedanya variable user dengan variable server ?
+
+Variable user
+- ditentukan oleh pengguna atau aplikasi
+- biasannya disimpan dalam lingkungan pengguna
+Variable server
+- ditentukan dan dikelola oleh server
+- mmenyimpan informasi terkait status dan konvigurasi server
+
+6.	Apa persamaan variable system dengan variable constant ?
+
+-	Keduanya digunakan untuk menyimpan nilai
+-	Dapat diakses secara global didalam program atau sistem
