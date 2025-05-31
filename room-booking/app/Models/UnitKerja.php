@@ -1,10 +1,16 @@
 <?php
 
-namespace APP\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class unitkerja extends Model
+class UnitKerja extends Model
 {
-    protected $table = 'unitkerja';
+
+    protected $fillable = ['kode', 'nama',];
+
+    public function pegawai()
+    {
+        return $this->hasMany(Pegawai::class, 'unit_kerja_id');
+    }
 }
