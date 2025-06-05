@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -83,10 +84,25 @@ class MahasiswaResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('jurusan')
+                    ->options(Mahasiswa::distinct()->pluck('jurusan', 'jurusan')->toArray()),
+                SelectFilter::make('jenis_kelamin')
+                    ->options([
+                        'L' => 'Laki-laki',
+                        'P' => 'Perempuan',
+                    ]),
+                SelectFilter::make('agama')
+                    ->options(Mahasiswa::distinct()->pluck('agama', 'agama')->toArray()),
+                SelectFilter::make('status')
+                    ->options([
+                        'aktif' => 'Aktif',
+                        'tidak aktif' => 'Tidak Aktif',
+                        'lulus' => 'Lulus',
+                    ]),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
